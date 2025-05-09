@@ -4,7 +4,10 @@ const createStudentModel = require('./student')
 
 const env = process.env.NODE_ENV || 'development'
 
+const dbPassword = process.env.DB_PASSWORD
+
 const config = configJson[env]
+config.password = dbPassword
 
 const sequelize = new Sequelize(config)
 
