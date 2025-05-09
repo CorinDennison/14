@@ -22,6 +22,6 @@ app.use(function(req, res, next, err) {
     res.status(500).send('Server error')
 })
 
-const server = app.listen(process.env.PORT || 3000, function() {
+const server = app.listen(process.env.PORT || 8080, function() {
     console.log('Express server running on port ', server.address().port)
 })
